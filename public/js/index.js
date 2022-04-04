@@ -20,8 +20,6 @@ const stopLoading = () => {
 };
 
 const handleError = (message) => {
-  // errorMessage.style.display = "block";
-  // errorMessage.textContent = message;
   alert(message);
 };
 
@@ -41,7 +39,6 @@ weatherForm.addEventListener("submit", (event) => {
       }
 
       const { temperature, description, feelslike, location, icon } = data;
-      console.log(icon);
       currTempValue.textContent = `${temperature} °C`;
       feelslikeTempValue.textContent = `${feelslike} °C`;
       weatherDescription.textContent = description;
