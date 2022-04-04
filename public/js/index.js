@@ -29,7 +29,7 @@ weatherForm.addEventListener("submit", (event) => {
   const address = addressInput.value.trim();
   startLoading();
 
-  fetch(`http://localhost:3000/forecast?address=${address}`)
+  fetch(`/forecast?address=${address}`)
     .then((res) => {
       return res.json();
     })
