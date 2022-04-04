@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  text-align: center;
+  color: blanchedalmond;
+  font-size: 1.5rem;
+  font-style: italic;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/pexels-lisa-fotios-1107717.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: fixed;
+  color: antiquewhite;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  flex: 0.7;
+}
+
+.navbar-nav {
+  flex: 0.3;
+}
+
+.icon {
+  font-size: 1.2rem !important;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: antiquewhite;
+}
+
+.image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.static-txt {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+  text-align: center;
+}
+.dynamic-txts li {
+  list-style: none;
+  color: #fc6d6d;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 80px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(252, 109, 109);
+  border-left: 2px solid #fc6d6d;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: antiquewhite;
+  text-align: center;
+  font-weight: 1.3rem;
+  padding: 20px;
+}
+.error {
+  display: flex;
+  flex-direction: column;
+}
+
+.error_title {
+  font-size: 50px;
+}
+
+.error_icon {
+  font-size: 50px;
+}
+
+.weather {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-form {
+  width: 40vw;
+  height: 30vh;
+  color: white;
+  padding: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  background: transparent;
+  border-bottom: 2px solid wheat;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.submit-button {
+  margin-top: 15px;
+  padding: 8px 25px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  background-color: #0984e3;
+  border: none;
+  cursor: pointer;
+  color: wheat;
+}
+
+.weather-data {
+  width: 40vw;
+}
+
+.temperature {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.temp {
+  display: flex;
+  flex-direction: column;
+}
+
+.temp_value {
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+#weatherIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* Spinner */
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .weather-form {
+    width: 70%;
+  }
+
+  .temp_value {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-text {
+    display: none;
+  }
+
+  .container {
+    font-size: 1.3rem;
+  }
+  .weather-data {
+    margin-left: 15px;
+    width: 100%;
+  }
+
+  .static-txt {
+    font-size: 30px;
+  }
+
+  .weather-form {
+    width: 100%;
+  }
+
+  .location {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .temp {
+    margin-right: 20px;
+  }
+
+  .temp_value {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}

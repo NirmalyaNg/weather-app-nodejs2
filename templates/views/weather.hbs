@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Page</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    {{>header}}
+    <div class="container">
+      <div class="weather">
+        <div class="weather-form">
+          <form id="weatherForm" autocomplete="off">
+            <div class="form-group">
+              <label for="location">Weather Location</label>
+              <input type="text" class="form-control" placeholder="Enter location" id="addressInput">
+            </div>
+            <button class="submit-button">Search</button>
+          </form>
+        </div>
+        <div class="weather-data" id="weatherData">
+          <div class="location">
+            <h3 id="address"></h3>
+          </div>
+          <div class="temperature">
+            <div class="temp">
+              <span class="temp_label">Current temp.</span>
+              <span class="temp_value" id="currTempValue"></span>
+            </div>
+            <div class="temp">
+              <span class="temp_label">Feelslike temp.</span>
+              <span class="temp_value" id="feelslikeTempValue"></span>
+            </div>
+          </div>
+          <div class="description">
+            <h4 id="weather_description"></h4>
+          </div>
+          <div class="icon" >
+            <img src="" alt="" id="weatherIcon">
+          </div>
+        </div>
+        <div class="lds-facebook" id="spinner"><div></div><div></div><div></div></div>
+        <div id="errorMessage">Error</div>
+      </div>
+      
+    </div>
+    {{>footer}}
+    <script src="/js/index.js"></script>
+  </body>
+</html>
